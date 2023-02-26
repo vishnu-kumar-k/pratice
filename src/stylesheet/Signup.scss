@@ -1,0 +1,25 @@
+.signup{
+    margin-top: 8em;
+    
+    .signup-container
+    {
+        
+        padding: 1em;
+        
+        form{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        background-color: rgb(255, 255, 255);
+        margin-left: 20em;
+        margin-right: 30em;
+        padding: 3em;
+        margin-right: 15em;
+        input{
+            padding: .8em;
+            border: none;
+            border-bottom: 2px solid red;
+        }
+        }
+    }
+}
