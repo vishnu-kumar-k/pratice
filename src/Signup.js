@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import "./stylesheet/Signup.scss"
 import axios from './api/axios'
 import { useNavigate} from "react-router-dom";
-import 'react-notifications/lib/notifications.css';
-import {NotificationContainer, NotificationManager} from 'react-notifications';
-NotificationManager.success('Success message', 'Title here');
-export const Signup = () => {
+
+export const Signup = (props) => {
 
   const[username,setUsername]=useState();
   const[useremail,setuseremail]=useState();
@@ -31,7 +29,7 @@ export const Signup = () => {
       {
 
         console.log(t);
-
+        props.setUser(username)
         navigate("/");
         
       }
@@ -57,7 +55,7 @@ export const Signup = () => {
         value={useremail}
         onChange={(e)=>{setuseremail(e.target.value)}}
         />
-        <input type="number"
+        <input type="text"
         required
         placeholder='Phone Number'
         value={usernumber}
