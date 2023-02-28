@@ -17,7 +17,7 @@ export const Login = (props) => {
       if(res.data.status)
       {
         props.setUser(res.data.q[0].name);
-        navigate("/");
+        navigate("/success");
         console.log("Login Successfull  "+JSON.stringify(res.data.q[0].name))
       }
       else

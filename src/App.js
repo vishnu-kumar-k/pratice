@@ -4,6 +4,7 @@ import { Signup } from './Signup'
 import {Login }from './Login';
 import { Home } from './Home';
 import "./stylesheet/App.scss";
+import Success from './Success';
 
 
 export default function App()
@@ -22,6 +23,10 @@ export default function App()
     {
       path:"/sign",
       element:<Signup setUser={setUser}/>
+    },
+    {
+      path:"/success",
+      element:<Success setUser={setUser}/>
     }
   
   ]
